@@ -1,7 +1,9 @@
-class Room < ApplicationRecord
-    validates :name, uniqueness: true, presence: true
-    scope :public_rooms, -> { where(is_private: false) }
-    after_create_commit { broadcast_append_to "rooms" }
+# frozen_string_literal: true
 
-    has_many :messages
+class Room < ApplicationRecord
+  validates :name, uniqueness: true, presence: true
+  scope :public_rooms, -> { where(is_private: false) }
+  after_create_commit { broadcast_append_to 'rooms' }
+
+  has_many :messages, dependent: :destroy
 end
