@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Application Controller manages for high level things at this level.
 class ApplicationController < ActionController::Base
   helper_method :current_user
 

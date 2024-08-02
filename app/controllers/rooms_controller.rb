@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# room controller for handling the room data.
 class RoomsController < ApplicationController
   before_action :require_login
   before_action :fetch_user_and_room_info, only: %i[index show]

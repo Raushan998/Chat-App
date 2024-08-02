@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# message model for defining the relations, scopes and others.
 class Message < ApplicationRecord
   belongs_to :user
   belongs_to :room

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Session Controller for handling login, logout flow.
 class SessionsController < ApplicationController
   def create
     user = User.find_by(username: params.dig(:session, :username))

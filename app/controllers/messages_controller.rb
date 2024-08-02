@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# message controller for handling messages data.
 class MessagesController < ApplicationController
   before_action :require_login
   def create

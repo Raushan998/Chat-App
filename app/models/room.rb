@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Room model to handle relationship and others
 class Room < ApplicationRecord
   validates :name, uniqueness: true, presence: true
   scope :public_rooms, -> { where(is_private: false) }
